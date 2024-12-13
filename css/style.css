@@ -278,11 +278,11 @@ input {
 
 .hero-section {
   background-color: rgb(var(--navy-blue));
-  height: 600px;
-  max-width: 1440px;
-  padding-top: 188px;
-  padding-bottom: 188px;
-  margin: auto;
+  height: 432px;
+  /* max-width: 320px; */
+  padding-top: 72px;
+  padding-bottom: 72px;
+  margin: 0 auto;
   background-image: linear-gradient(
       to bottom,
       rgba(var(--gradient-background-color)),
@@ -292,6 +292,39 @@ input {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-section {
+    height: 436px;
+    padding-top: 112px;
+    padding-bottom: 112px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(var(--gradient-background-color)),
+        rgba(var(--gradient-background-color))
+      ),
+      url(../images/hero-section/people-office_hero_section_img.jpg);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero-section {
+    height: 600px;
+    max-width: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    margin: auto;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(var(--gradient-background-color)),
+        rgba(var(--gradient-background-color))
+      ),
+      url(../images/hero-section/people-office_hero_section_img.jpg);
+  }
 }
 
 .hero-section .container {
@@ -302,12 +335,37 @@ input {
 }
 
 .hero-title {
-  font-size: 56px;
-  line-height: 1.07;
   color: rgb(var(--white));
-  margin-bottom: 48px;
-  max-width: 496px;
+  margin-bottom: 72px;
+  max-width: 216px;
+
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.72px;
 }
+
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    color: rgb(var(--white));
+    margin-bottom: 72px;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    color: rgb(var(--white));
+    margin-bottom: 72px;
+    max-width: 496px;
+    margin-bottom: 48px;
+  }
+}
+
 .cta-button {
   font-weight: var(--weight-medium);
   letter-spacing: 0.04em;
