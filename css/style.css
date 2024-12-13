@@ -349,6 +349,19 @@ input {
   border: 1px solid rgba(var(--light-slate));
   border-radius: 4px;
   margin-bottom: 8px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .strength-item-icon {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .strength-item-icon {
+    display: block;
+  }
 }
 
 .strength-details {
@@ -358,15 +371,73 @@ input {
 
 .strengths-list {
   display: flex;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 72px;
+  flex-direction: column;
 }
+
+@media only screen and (min-width: 768px) {
+  .strengths-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .strengths-list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+}
+
 .strength-item {
-  flex-basis: calc((100% - 3 * 24px) / 4); /* Dynamically calculates width */
+  /* flex-basis: calc((100% - 3 * 24px) / 4); */
+}
+
+@media only screen and (min-width: 768px) {
+  .strength-item {
+    width: calc(50% - 24px);
+    margin-bottom: 72px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .strength-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
 }
 
 .strength-title {
+  font-size: 36px;
+
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.72px;
   margin-bottom: 8px;
+  align-items: center;
+  text-align: center;
 }
+
+@media only screen and (min-width: 768px) {
+  .strength-title {
+    align-items: start;
+    text-align: start;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .strength-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    align-items: start;
+    text-align: start;
+  }
+}
+
 .strength-description {
 }
 /* #endregion */
