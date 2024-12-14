@@ -823,6 +823,18 @@ input {
 }
 
 @media only screen and (min-width: 768px) {
+  .page-footer .container {
+    margin-left: 108px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .page-footer .container {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .row-container {
     display: inline-flex;
   }
