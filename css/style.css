@@ -1220,8 +1220,12 @@ input {
   letter-spacing: 0.48px;
   color: rgba(var(--light-slate));
   user-select: none;
+  display: flex;
 
   align-items: center;
+}
+
+.privacy-policy-data-wrapper {
 }
 
 .modal-form-checkbox {
@@ -1238,6 +1242,7 @@ input {
   transition-property: border, background-color, fill;
   align-items: center; /* Align checkbox and text vertically */
   fill: transparent;
+  flex-shrink: 0;
 }
 
 input[type='checkbox']:checked
