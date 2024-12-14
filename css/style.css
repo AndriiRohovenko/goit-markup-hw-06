@@ -247,19 +247,19 @@ input {
   }
 }
 
-.navigation-menu {
+.page-header .navigation-menu {
   display: none;
   gap: 40px;
 }
 
 @media only screen and (min-width: 768px) {
-  .navigation-menu {
+  .page-header .navigation-menu {
     display: flex;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .navigation-menu {
+  .page-header .navigation-menu {
     display: flex;
   }
 }
@@ -305,19 +305,19 @@ input {
   background-color: rgb(var(--ocean));
 } */
 
-.contact-info {
+.page-header .contact-info {
   font-style: normal;
   display: none;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact-info {
+  .page-header .contact-info {
     display: flex;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .contact-info {
+  .page-header .contact-info {
     display: flex;
   }
 }
@@ -984,7 +984,7 @@ input {
 
 /* #endregion */
 
-/* #region  */
+/* #region Modal  */
 
 .backdrop {
   position: fixed;
@@ -1010,8 +1010,8 @@ input {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   padding: 24px;
   padding-top: 72px;
   border-radius: 4px;
@@ -1022,6 +1022,21 @@ input {
   transition: var(--custom-transition);
   transition-property: transform;
 }
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+  }
+}
+
 .backdrop.is-open .modal {
   transform: translateX(-50%) translateY(-50%);
 }
@@ -1151,8 +1166,9 @@ input {
 
 .modal-form-agreement {
   margin-bottom: 24px;
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Align checkbox and text vertically */
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .modal-form-agreement-desc {
   font-size: 12px;
@@ -1162,7 +1178,7 @@ input {
   color: rgba(var(--light-slate));
   user-select: none;
 
-  align-items: center; /* Align checkbox and text vertically */
+  align-items: center;
 }
 
 .modal-form-checkbox {
@@ -1210,11 +1226,97 @@ input[type='checkbox']:checked
 
   line-height: 1.17;
   letter-spacing: 0.48px;
-  margin-left: 4px;
+  /* margin-left: 4px; */
 }
 
 .modal .cta-button {
   margin: auto;
+}
+
+/* #endregion */
+
+/* #region Mobile-ham-menu */
+
+.backdrop-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--backdrop-depth);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--navy-blue-modal));
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: var(--custom-transition);
+  transition-property: opacity, visibility;
+
+  transform: translateX(100%);
+}
+.backdrop-mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+  transform: translateX(0);
+}
+
+.mobile-ham-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  padding: 16px;
+  background: #fcfcfc;
+
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: var(--custom-transition);
+  transition-property: transform;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-ham-menu-navigation {
+}
+
+.mobile-ham-menu-navigation .navigation-menu {
+  display: flex;
+  flex-direction: column;
+  /* gap: 40px; */
+  margin-top: 72px;
+  margin-bottom: 168px;
+}
+
+.mobile-ham-menu-navigation .navigation-item {
+  font-size: 36px;
+
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+}
+
+.mobile-ham-menu .contact-list {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+}
+
+.mobile-ham-menu .contact-item {
+  font-size: 20px;
+
+  font-weight: var(--weight-medium);
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+
+.mobile-ham-menu .social-media-list {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
 /* #endregion */
