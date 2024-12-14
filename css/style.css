@@ -126,7 +126,8 @@ input {
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid red; /* Use to debug container boundaries */
+  /* outline: 2px solid red;  */
+  /* Use to debug container boundaries */
 }
 
 @media screen and (min-width: 768px) {
@@ -370,13 +371,24 @@ input {
       rgba(var(--gradient-background-color)),
       rgba(var(--gradient-background-color))
     ),
-    url(../images/hero-section/people-office_hero_section_img.jpg);
+    url(../images/hero-section/mobile-hero-section-bg-img-1x.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+@media (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(var(--gradient-background-color)),
+        rgba(var(--gradient-background-color))
+      ),
+      url(../images/hero-section/mobile-hero-section-bg-img-2x.jpg);
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -389,7 +401,17 @@ input {
         rgba(var(--gradient-background-color)),
         rgba(var(--gradient-background-color))
       ),
-      url(../images/hero-section/people-office_hero_section_img.jpg);
+      url(../images/hero-section/tablet-hero-section-bg-image-1x.jpg);
+  }
+  @media (min-resolution: 192dpi) {
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(var(--gradient-background-color)),
+          rgba(var(--gradient-background-color))
+        ),
+        url(../images/hero-section/tablet-hero-section-bg-image-2x.jpg);
+    }
   }
 }
 
@@ -405,7 +427,17 @@ input {
         rgba(var(--gradient-background-color)),
         rgba(var(--gradient-background-color))
       ),
-      url(../images/hero-section/people-office_hero_section_img.jpg);
+      url(../images/hero-section/desktop-hero-section-bg-image-1x.jpg);
+  }
+  @media (min-resolution: 192dpi) {
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(var(--gradient-background-color)),
+          rgba(var(--gradient-background-color))
+        ),
+        url(../images/hero-section/desktop-hero-section-bg-image-2x.jpg);
+    }
   }
 }
 
