@@ -207,9 +207,22 @@ input {
 }
 
 .navigation-menu {
-  display: flex;
+  display: none;
   gap: 40px;
 }
+
+@media only screen and (min-width: 768px) {
+  .navigation-menu {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .navigation-menu {
+    display: flex;
+  }
+}
+
 .navigation-item:first-child .navigation-link {
   color: rgb(var(--ocean));
 }
@@ -253,12 +266,40 @@ input {
 
 .contact-info {
   font-style: normal;
+  display: none;
 }
+
+@media only screen and (min-width: 768px) {
+  .contact-info {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .contact-info {
+    display: flex;
+  }
+}
+
 .contact-list {
   display: flex;
   gap: 40px;
   justify-content: space-between;
 }
+
+@media only screen and (min-width: 768px) {
+  .contact-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .contact-list {
+    flex-direction: row;
+  }
+}
+
 .contact-item {
 }
 .contact-link {
